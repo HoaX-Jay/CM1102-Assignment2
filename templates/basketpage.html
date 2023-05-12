@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} HoaxStores - Basket{% endblock %}
+{% block content%}
+{% for product in basket %}
+<div>
+  <h3>{{ product.name }}</h3>
+  <p>Description: {{ product.description }}</p>
+  <p>Price: £{{ product.price }}</p>
+  <hr>
+</div>
+{% endfor %}
+
+<h4>Total Price: £{{ total_price }}</h4>
+
+
+
+
+{% endblock %}

@@ -1,27 +1,12 @@
 {% extends "base.html" %}
 {% block title %} HoaxStores - Checkout {% endblock %}
 {% block content %}
-<form action="#" method="post">
-    <p>Firstname :</p>
-    <p><input type="text" name="name"/></p>
-    <p>Surname :</p>
-    <p><input type="text" name="sn"/></p>
-    <p>Postcode :</p>
-    <p><input type="text" name="pc"/></p>
-    <p>Street Name :</p>
-    <p><input type="text" name="stn"/></p>
-    <p>Town/City :</p>
-    <p><input type="text" name="torc"/></p>
+<form action="{{ url_for('checkout')}}" method="POST">
     <p>Card Name :</p>
-    <p><input type="text" name="cn"/></p>
+    <p><input type="text" name="names" placeholder="John Doe" required/></p>
     <p>Card Number (16-digit) :</p>
-    <p><input type="text" namer="cnum"/></p>
-    <p>CVV (3-digit) :</p>
-    <p><input type="text" name="cvv"/></p>
-    <p>Expiry Date (MM/YY) :</p>
-    <p><input type="text" name="ed"/></p>
-    <p><input type="submit" value="submit"/></p>
-
+    <p><input type="text" name="cardnum" placeholder="XXXX-XXXX-XXXX-XXXX" required/></p>
+    <input type="submit" value="Purchase">
 
 </form>
 {% endblock %}
